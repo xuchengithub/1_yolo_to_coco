@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  web2:
+    image: "python"
+    # command: gunicorn --bind 0.0.0.0:50001 manage:app
+    # command: gunicorn --certfile=/usr/src/app/web/192.168.12.18.pem --keyfile=/usr/src/app/web/192.168.12.18-key.pem --bind 192.168.12.18:50000  manage:app
+    volumes:
+      - ../:/usr/src/app/
+    tty: true
+    expose:
+      - 50000
+
